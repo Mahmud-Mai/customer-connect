@@ -4,6 +4,7 @@
 import SummaryBarChart from "../components/SummaryBarChart";
 import OrdersList from "../components/OrdersList";
 import SummaryCard from "../components/SummaryCard";
+import MarketingPieChart from "../components/MarketingPieChart";
 
 const Dashboard = () => {
   return (
@@ -28,8 +29,10 @@ const Dashboard = () => {
       {/* Charts And Recent Orders  */}
       <div className="grid grid-flow-col gap-4 mt-5">
         <div className="col-span-3">
-          <div className="row-span-1 grid grid-cols-2">
-            <div className="col-span-1">Summary</div>
+          <div className="row-span-1 grid grid-cols-2 gap-4">
+            <div className="col-span-1 bg-white">
+              <MarketingPieChart />
+            </div>
             <div className="col-span-1 grid grid-rows-2 gap-[19px]">
               <p>
                 <SummaryCard />
