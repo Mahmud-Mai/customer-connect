@@ -49,7 +49,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="basis-[20.56%] bg-white w-full h-screen flex flex-col px-8 pt-[14px] pb-8">
+    <aside className="hidden  basis-[20.56%] bg-white w-full h-screen lg:flex flex-col px-8 pt-[14px] pb-8">
       {/* Logo  */}
       <div className="w-[124px] h-[52px]">
         <img
@@ -58,7 +58,7 @@ const Sidebar = () => {
           alt="logo"
         />
       </div>
-      {/* Stretch Menu Links and Support/Logout links */}
+      {/* Stretch Menu Links and Support/Logout links across the screen */}
       <div className="h-screen flex flex-col justify-between">
         {/* Nav Items  */}
         <div className="flex flex-col mt-[62px]">
