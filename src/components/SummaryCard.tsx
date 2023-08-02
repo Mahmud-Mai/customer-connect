@@ -3,7 +3,7 @@ import { BsChevronDown } from "react-icons/bs";
 
 interface ISummanryCard {
   data: {
-    label_1: string;
+    label_1: string | JSX.Element;
     value_1: string;
     incr_1?: string;
     label_2: string;
@@ -37,7 +37,7 @@ const SummaryCard = ({
         >
           {icon}
         </span>
-        <div className="flex gap-5 items-center text-3 text-black/10 font-normal py-[5px] px-3">
+        <div className="flex gap-5 items-center text-3 text-[#BEC0CA] font-normal py-[5px] px-3">
           This Week
           <span>
             <BsChevronDown />

@@ -1,14 +1,15 @@
 // Icons import
-import { BsChevronDown } from "react-icons/bs";
+import { FiShoppingCart } from "react-icons/fi";
 import { FiFolderMinus } from "react-icons/fi";
-import { PiHandbag } from "react-icons/pi";
 import { LuUsers } from "react-icons/lu";
+import { PiHandbag } from "react-icons/pi";
 
 // Components import
 import SummaryBarChart from "../components/SummaryBarChart";
 import OrdersList from "../components/OrdersList";
 import SummaryCard from "../components/SummaryCard";
 import MarketingPieChart from "../components/MarketingPieChart";
+import DropDown from "../components/DropDown";
 
 const Dashboard = () => {
   return (
@@ -62,12 +63,12 @@ const Dashboard = () => {
       </div>
 
       {/*--------------------- ROW 2: Charts And Recent Orders  -------------------------*/}
-      <div className="grid grid-cols-5 gap-4 mt-5">
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 mt-5">
         {/* -------Row 2.(1): Pie Chart and two Summary Cards  -------*/}
         <div className="col-span-3">
           <div className="row-span-1 grid grid-cols-2 gap-4">
             {/*--- Pie Chart  Section---*/}
-            <div className="rounded-xl col-span-1 bg-white">
+            <div className="rounded-xl  col-span-1 bg-white">
               <MarketingPieChart />
             </div>
             <div className="col-span-1 grid grid-rows-2 gap-[19px]">
@@ -79,11 +80,6 @@ const Dashboard = () => {
                     <span className="flex w-9 h-9 justify-center bg-[#7087f3] p-[2px] rounded-lg items-center">
                       <FiFolderMinus className="w-5 h-5 text-white bg-primary-100/10" />
                     </span>
-                    <div className="flex gap-5 items-center text-3 text-black/10 font-normal py-[5px] px-3">
-                      <span>
-                        <BsChevronDown />{" "}
-                      </span>
-                    </div>
                   </p>
                   {/*---  Statistics  Section ---*/}
                   <p className="grid grid-cols-2 w-full gap-x-8">
@@ -99,7 +95,9 @@ const Dashboard = () => {
                       <span className="text-[14px] mb-2">Active</span>
                       <span className="text-base lg:text-xl">
                         32
-                        <span className="text-[12px]">+24.00%0%</span>{" "}
+                        <span className="text-[12px] ml-[7px]">
+                          +24.00%0%
+                        </span>{" "}
                       </span>
                     </span>
                   </p>
@@ -107,13 +105,15 @@ const Dashboard = () => {
               </p>
               <p>
                 <SummaryCard
-                  label_1={"Abandoned Cart"}
+                  label_1={
+                    <span className="text-[#CC5F5F]">Abandoned Cart</span>
+                  }
                   value_1={"20%"}
                   incr_1={"+0.00%"}
                   label_2={"Customers"}
                   value_2={"30"}
                   icon={
-                    <FiFolderMinus className="text-[#1C1D22] bg-[#FFCC9129]" />
+                    <FiShoppingCart className="text-[#1C1D22] bg-[#FFCC9129]" />
                   }
                   icon_bg={"#FFCC9129"}
                 />
@@ -128,20 +128,18 @@ const Dashboard = () => {
               <div className="flex justify-between">
                 <div className="flex justify-between gap-[21px] items-center">
                   <h2>Summary</h2>
-                  <div className="flex gap-5 items-center text-3 bg-[#5570F114] text-primary-100 font-normal px-3">
-                    This Week
-                    <span>
-                      <BsChevronDown />
-                    </span>
-                  </div>
+                  <DropDown
+                    label={"This Week"}
+                    color={"#5570F1"}
+                    bg_color={"#5570F114"}
+                  />
                 </div>
                 {/* 7 days section  */}
-                <div className="flex gap-5 items-center text-3 text-[#1C1D22] font-normal px-3">
-                  7 days
-                  <span>
-                    <BsChevronDown />
-                  </span>
-                </div>
+                <DropDown
+                  label="7 days"
+                  color="#1C1D22"
+                  bg_color={"#fff"}
+                />
               </div>
               {/* Bar Chart */}
               <div className="mt-9">
@@ -152,7 +150,7 @@ const Dashboard = () => {
         </div>
 
         {/*------- Row 2.(2): Recent Orders  -------*/}
-        <div className="bg-white rounded-xl col-span-2 row-span-2">
+        <div className="bg-white rounded-xl col-span-3 lg:col-span-2 row-span-2">
           <OrdersList />
         </div>
       </div>
