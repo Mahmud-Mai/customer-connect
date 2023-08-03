@@ -1,5 +1,5 @@
 import { BsSearch } from "react-icons/bs";
-import ProfileBar from "../../components/ProfileBar";
+import ProfileBar from "./ProfileBar";
 
 const Conversations = () => {
   return (

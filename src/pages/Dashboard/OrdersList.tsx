@@ -1,7 +1,7 @@
 import OrdersListItem from "./OrdersListItem";
-import iphone_1 from "../assets/iphone_1.jpg";
-import iphone_2 from "../assets/iphone_2.jpg";
-import iphone_3 from "../assets/iphone_3.jpg";
+import iphone_1 from "../../assets/iphone_1.jpg";
+import iphone_2 from "../../assets/iphone_2.jpg";
+import iphone_3 from "../../assets/iphone_3.jpg";
 
 interface IOrdersList {
   data: {

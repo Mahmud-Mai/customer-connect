@@ -1,5 +1,5 @@
 import { BsHandbag } from "react-icons/bs";
-import profile from "../assets/profile.jpg";
+import profile from "../../assets/profile.jpg";
 
 const ProfileBar = () => {
   return (
