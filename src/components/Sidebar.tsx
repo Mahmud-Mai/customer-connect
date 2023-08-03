@@ -49,7 +49,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="hidden  basis-[20.56%] bg-white w-full h-screen lg:flex flex-col px-8 pt-[14px] pb-8">
+    <aside className="hidden basis-[20.56%] bg-white w-full h-screen xl:flex flex-col px-8 pt-[14px] pb-8">
       {/* Logo  */}
       <div className="w-[124px] h-[52px]">
         <img

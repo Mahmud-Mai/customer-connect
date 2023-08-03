@@ -51,6 +51,7 @@ const SummaryBarChart = () => {
             barSize={13}
             fill="#5570F1"
           />
+          <div className=" bg-red-400"></div>
         </BarChart>
       </ResponsiveContainer>
     </>
