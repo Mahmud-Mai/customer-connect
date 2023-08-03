@@ -1,14 +1,16 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import DropDown from "../../components/DropDown";
 
-const data = [
-  { name: "Group A", value: 35 },
-  { name: "Group B", value: 10 },
-  { name: "Group C", value: 55 },
-];
-const COLORS = ["#FFCC91", "#97A5EB", "#5570F1"];
+// redux imports
+import { useSelector } from "react-redux";
+import type { RootState } from "../../app/store";
 
 const MarketingPieChart = () => {
+  const pie_data = useSelector((state: RootState) => state.pieChart.input);
+  console.log(`🚀 ~ MarketingPieChart ~ pie_data:`, pie_data);
+
+  const COLORS = ["#FFCC91", "#97A5EB", "#5570F1"];
+
   return (
     <>
       <div className="flex justify-between px-5 py-[23px] gap-[21px] items-center">
@@ -40,13 +42,13 @@ const MarketingPieChart = () => {
         <ResponsiveContainer height={250}>
           <PieChart>
             <Pie
-              data={data}
+              data={pie_data}
               innerRadius={67}
               outerRadius={90}
               fill="#8884d8"
               dataKey="value"
             >
-              {data.map((_entry, index) => (
+              {pie_data.map((_entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

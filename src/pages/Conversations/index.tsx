@@ -1,14 +1,21 @@
 import { BsSearch } from "react-icons/bs";
 import ProfileBar from "./ProfileBar";
 
+// redux import
+import { RootState } from "../../app/store";
+import { useSelector } from "react-redux";
+
 const Conversations = () => {
+  const messages = useSelector((state: RootState) => state.conversations);
+  console.log(`🚀 ~ Conversations ~ messages:`, messages);
+
   return (
     <div className="flex flex-col mt-[107px] mx-[22px] h-screen-[107px] justify-center items-center">
       {/*------------- Page Heading  -------------*/}
       <div className="flex justify-between items-center w-full">
-        <p>
+        <div>
           <h1 className="text-[#45464E]">Conversations with Customers</h1>
-        </p>
+        </div>
         <p>
           <button className="bg-[#5570F1] hover:bg-[#5570F1]/90 hover:scale-105 duration-300 text-white py-[9.5px] px-[33.5px] rounded-xl">
             New Message
