@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import DropDown from "./DropDown";
+import DropDown from "../../components/DropDown";
 
 const data = [
   { name: "Group A", value: 35 },
