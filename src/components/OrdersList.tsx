@@ -27,7 +27,7 @@ const ORDERS_DATA = [
   },
   {
     id: 1,
-    label: "iPhone 13",
+    label: "iPhone 12 Pro Max",
     date: "12 Sept 2023",
     price: "₦710,000.00",
     qty: 3,
@@ -36,7 +36,7 @@ const ORDERS_DATA = [
   },
   {
     id: 2,
-    label: "iPhone 13",
+    label: "iPhone 13 Pro",
     date: "12 Sept 2023",
     price: "₦780,000.00",
     qty: 4,
@@ -45,7 +45,7 @@ const ORDERS_DATA = [
   },
   {
     id: 3,
-    label: "iPhone 13",
+    label: "iPhone 12",
     date: "12 Sept 2023",
     price: "₦830,000.00",
     qty: 2,
@@ -54,11 +54,29 @@ const ORDERS_DATA = [
   },
   {
     id: 4,
-    label: "iPhone 13",
+    label: "iPhone 14",
     date: "12 Sept 2023",
     price: "₦950,000.00",
     qty: 8,
+    imgSrc: iphone_2,
+    status: "Pending",
+  },
+  {
+    id: 5,
+    label: "iPhone 13",
+    date: "12 Sept 2023",
+    price: "₦730,000.00",
+    qty: 1,
     imgSrc: iphone_3,
+    status: "Pending",
+  },
+  {
+    id: 6,
+    label: "iPhone 13",
+    date: "12 Sept 2023",
+    price: "₦710,000.00",
+    qty: 3,
+    imgSrc: iphone_2,
     status: "Pending",
   },
 ];

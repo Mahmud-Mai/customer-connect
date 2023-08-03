@@ -5,11 +5,11 @@ import { LuUsers } from "react-icons/lu";
 import { PiHandbag } from "react-icons/pi";
 
 // Components import
-import SummaryBarChart from "../components/SummaryBarChart";
-import OrdersList from "../components/OrdersList";
-import SummaryCard from "../components/SummaryCard";
-import MarketingPieChart from "../components/MarketingPieChart";
-import DropDown from "../components/DropDown";
+import SummaryBarChart from "../../components/SummaryBarChart";
+import OrdersList from "../../components/OrdersList";
+import SummaryCard from "../../components/SummaryCard";
+import MarketingPieChart from "../../components/MarketingPieChart";
+import DropDown from "../../components/DropDown";
 
 const Dashboard = () => {
   return (
