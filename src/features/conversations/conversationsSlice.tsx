@@ -1,19 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  conversations: [],
+  messages: [],
 };
 
 export const conversationsSlice = createSlice({
-  name: "conversations",
+  name: "messages",
   initialState,
   reducers: {
     addConversation(state, action) {
-      state.conversations.push(action.payload);
+      // Not implemented for now
+      state.messages.push(action.payload);
     },
     removeConversation(state, action) {
-      state.conversations = state.conversations.filter((conversation) => {
-        return conversation.id !== action.payload;
+      state.messages = state.messages.filter((message) => {
+        return message.id !== action.payload;
       });
     },
   },
