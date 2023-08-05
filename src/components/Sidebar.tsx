@@ -7,7 +7,7 @@ import { NAVITEMS as nav_items } from "../data/constants";
 
 export interface INav {
   navMenu: {
-    id: number;
+    key: number;
     icon: JSX.Element;
     name: string;
     link: string;
@@ -20,7 +20,7 @@ const Sidebar = () => {
     return nav_items.map(({ id, name, icon, alert, link }) => {
       return (
         <MenuItem
-          id={id}
+          key={id}
           name={name}
           icon={icon}
           alert={alert}
@@ -65,7 +65,7 @@ const Sidebar = () => {
           </a>
 
           {/* Logout  */}
-          <p className="flex capitalize text-[#CC5F5F] text-[14px] leading-[16.94px] font-normal hover:cursor-pointer">
+          <div className="flex capitalize text-[#CC5F5F] text-[14px] leading-[16.94px] font-normal hover:cursor-pointer">
             <span className="w-1/2 h-full py-[11px] px-[15px]">
               <a className="flex items-center gap-2">
                 <div>
@@ -75,7 +75,7 @@ const Sidebar = () => {
               </a>
             </span>
             <span className="w-1/2 h-full py-[11px] px-[15px]"></span>
-          </p>
+          </div>
         </div>
       </div>
     </aside>

@@ -7,7 +7,6 @@ import type { RootState } from "../../app/store";
 
 const MarketingPieChart = () => {
   const pie_data = useSelector((state: RootState) => state.pieChart.input);
-  console.log(`🚀 ~ MarketingPieChart ~ pie_data:`, pie_data);
 
   const COLORS = ["#FFCC91", "#97A5EB", "#5570F1"];
 
