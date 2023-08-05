@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import conversationsReducer from "../features/conversations/conversationsSlice";
+import ordersReducer from "../features/orders/ordersSlice";
+import pieChartReducer from "../features/pieChart/pieChartSlice";
 
 export const store = configureStore({
   reducer: {
     conversations: conversationsReducer,
+    orders: ordersReducer,
+    pieChart: pieChartReducer,
   },
 });
 
