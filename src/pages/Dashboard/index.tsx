@@ -1,10 +1,8 @@
-// Icons import
+// Importing necessary React icons and components
 import { FiShoppingCart } from "react-icons/fi";
 import { FiFolderMinus } from "react-icons/fi";
 import { LuUsers } from "react-icons/lu";
 import { PiHandbag } from "react-icons/pi";
-
-// Components import
 import SummaryBarChart from "./SummaryBarChart";
 import OrdersList from "./OrdersList";
 import SummaryCard from "./SummaryCard";
@@ -20,6 +18,7 @@ const Dashboard = () => {
         <div className="col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
+              {/* SummaryCard component for Sales and Volume */}
               <SummaryCard
                 label_1={"Sales"}
                 value_1={"N4,000,000"}
@@ -34,6 +33,7 @@ const Dashboard = () => {
               />
             </div>
             <div>
+              {/* SummaryCard component for Customers and Active */}
               <SummaryCard
                 label_1={"Customers"}
                 value_1={"1,250"}
@@ -49,6 +49,7 @@ const Dashboard = () => {
         </div>
         {/*------- Row 1: last box right  -------*/}
         <div className="col-span-2">
+          {/* SummaryCard component for All Orders, Completed, and Pending */}
           <SummaryCard
             label_1={"All Orders"}
             value_1={"450"}
@@ -67,7 +68,7 @@ const Dashboard = () => {
         {/* -------Row 2.(1): Pie Chart and two Summary Cards  -------*/}
         <div className="col-span-3">
           <div className="row-span-1 grid grid-cols-2 gap-4">
-            {/*--- Pie Chart  Section---*/}
+            {/*--- MarketingPieChart component ---*/}
             <div className="rounded-xl  col-span-1 bg-white">
               <MarketingPieChart />
             </div>
@@ -104,6 +105,7 @@ const Dashboard = () => {
                 </div>
               </p>
               <p>
+                {/* SummaryCard component for Abandoned Cart and Customers */}
                 <SummaryCard
                   label_1={
                     <span className="text-[#CC5F5F]">Abandoned Cart</span>
@@ -128,20 +130,21 @@ const Dashboard = () => {
               <div className="flex justify-between">
                 <div className="flex justify-between gap-[21px] items-center">
                   <h2>Summary</h2>
+                  {/* DropDown component for "This Week" */}
                   <DropDown
                     label={"This Week"}
                     color={"#5570F1"}
                     bg_color={"#5570F114"}
                   />
                 </div>
-                {/* 7 days section  */}
+                {/* DropDown component for "7 days" */}
                 <DropDown
                   label="7 days"
                   color="#1C1D22"
                   bg_color={"#fff"}
                 />
               </div>
-              {/* Bar Chart */}
+              {/* SummaryBarChart component */}
               <div className="mt-9">
                 <SummaryBarChart />
               </div>
@@ -151,6 +154,7 @@ const Dashboard = () => {
 
         {/*------- Row 2.(2): Recent Orders  -------*/}
         <div className="bg-white rounded-xl col-span-3 lg:col-span-2 row-span-2">
+          {/* OrdersList component */}
           <OrdersList />
         </div>
       </div>
