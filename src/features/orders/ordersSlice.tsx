@@ -94,7 +94,7 @@ const ordersSlice = createSlice({
   initialState,
   reducers: {
     // Not implemented for now
-    addOrder(state, action: PayloadAction<Order>) {
+    addOrder(state, action: PayloadAction<OrderData>) {
       return {
         ...state,
         orders: [...state.orders, action.payload],

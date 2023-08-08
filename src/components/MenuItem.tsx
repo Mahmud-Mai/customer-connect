@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-// import { INav as IProps } from "./Sidebar";
 
-const MenuItem = ({ id, icon, name, link, alert }) => {
+interface Menu {
+  icon: JSX.Element;
+  name: string;
+  link: string;
+  alert?: number;
+}
+
+const MenuItem = ({ icon, name, link, alert }: Menu) => {
   return (
     <Link
       to={link}
-      key={id}
       className="flex items-center capitalize text-black-50 text-[14px] leading-[16.94px] font-normal gap-4 px-5 active:py-4 active:bg-primary-100 active:text-white hover:cursor-pointer rounded-xl my-4"
     >
       <span>{icon}</span>
